@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Poker Payout</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <h1>Poker Payout</h1>
+    <h2> Settle Cash Games with Ease!</h2>
+    <form id="playerForm">
+        <div class="table-container">
+            <table id="playerTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>In</th>
+                        <th>Out</th>
+                    </tr>
+                </thead>
+                <tbody id="playerTableBody">
+                    <tr>
+                        <td><input type="text" name="name" placeholder="Enter name"></td>
+                        <td><input type="number" name="buyIn" placeholder="In"></td>
+                        <td><input type="number" name="buyOut" placeholder="Out"></td>
+                        <td><button class="removeButton" type="button" onclick="removeRow(this.parentNode.parentNode)">Remove</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="name" placeholder="Enter name"></td>
+                        <td><input type="number" name="buyIn" placeholder="In"></td>
+                        <td><input type="number" name="buyOut" placeholder="Out"></td>
+                        <td><button class="removeButton" type="button" onclick="removeRow(this.parentNode.parentNode)">Remove</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="name" placeholder="Enter name"></td>
+                        <td><input type="number" name="buyIn" placeholder="In"></td>
+                        <td><input type="number" name="buyOut" placeholder="Out"></td>
+                        <td><button class="removeButton" type="button" onclick="removeRow(this.parentNode.parentNode)">Remove</button></td>
+                    </tr>
+                
+                <!-- Player rows will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+        <div id="buttonContainer">
+            <button type="button" class="rounded-button" onclick="addPlayerRow()">Add Player</button>
+            <button type="button" class="rounded-button" onclick="settlePayments()">Settle Payments</button>
+        </div>
+    </form>
+    <div id="paymentResult">
+        <!-- Payment results will be shown here -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
