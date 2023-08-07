@@ -69,8 +69,14 @@ function settler(names, buy_ins, buy_outs) {
         total_out += buy_outs[i];
     }
 
-    if (total_in != total_out) {
-        settlementInfo += "Total's aren't even, error in chips" + '. ';
+    // Checks if the totals are even, and if not tells the user how much is off
+    if (total_in > total_out) {
+        difference = total_in - total_out
+        settlementInfo += "Total's aren't even, chips short by $" + difference
+    }
+    else if (total_out > total_in) {
+        difference = total_out - total_in
+        settlementInfo += "Total's aren't even, $" + difference + ' in extra chips on the table.'
     }
 
     // makes the ledger 
