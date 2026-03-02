@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poker Payout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>&#9824; Poker Payout</h1>
+            <p class="subtitle">Settle cash games with minimal transactions</p>
+        </header>
+
+        <div class="card">
+            <div class="table-wrapper">
+                <table id="playerTable">
+                    <thead>
+                        <tr>
+                            <th>Player</th>
+                            <th>Buy In ($)</th>
+                            <th>Cash Out ($)</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="playerTableBody">
+                        <tr>
+                            <td><input type="text" name="name" placeholder="Name"></td>
+                            <td><input type="number" name="buyIn" placeholder="0" min="0"></td>
+                            <td><input type="number" name="buyOut" placeholder="0" min="0"></td>
+                            <td><button class="btn-remove" type="button" onclick="removePlayerRow(this)">&#x2715;</button></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="name" placeholder="Name"></td>
+                            <td><input type="number" name="buyIn" placeholder="0" min="0"></td>
+                            <td><input type="number" name="buyOut" placeholder="0" min="0"></td>
+                            <td><button class="btn-remove" type="button" onclick="removePlayerRow(this)">&#x2715;</button></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="name" placeholder="Name"></td>
+                            <td><input type="number" name="buyIn" placeholder="0" min="0"></td>
+                            <td><input type="number" name="buyOut" placeholder="0" min="0"></td>
+                            <td><button class="btn-remove" type="button" onclick="removePlayerRow(this)">&#x2715;</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="actions">
+                <button type="button" class="btn-secondary" onclick="addPlayerRow()">+ Add Player</button>
+                <button type="button" class="btn-primary" onclick="settlePayments()">Settle Up</button>
+            </div>
+        </div>
+
+        <div id="resultContainer" class="result-card hidden">
+            <h2>Settlement</h2>
+            <div id="paymentResult"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
